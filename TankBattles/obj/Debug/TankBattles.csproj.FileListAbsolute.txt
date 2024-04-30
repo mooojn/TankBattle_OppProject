@@ -1,0 +1,13 @@
+D:\c# files\TankBattles\bin\Debug\TankBattles.exe.config
+D:\c# files\TankBattles\bin\Debug\TankBattles.exe
+D:\c# files\TankBattles\bin\Debug\TankBattles.pdb
+D:\c# files\TankBattles\bin\Debug\GameProject.dll
+D:\c# files\TankBattles\bin\Debug\GameProject.pdb
+D:\c# files\TankBattles\obj\Debug\TankBattles.csproj.AssemblyReference.cache
+D:\c# files\TankBattles\obj\Debug\TankBattles.Form1.resources
+D:\c# files\TankBattles\obj\Debug\TankBattles.Properties.Resources.resources
+D:\c# files\TankBattles\obj\Debug\TankBattles.csproj.GenerateResource.cache
+D:\c# files\TankBattles\obj\Debug\TankBattles.csproj.CoreCompileInputs.cache
+D:\c# files\TankBattles\obj\Debug\TankBattles.csproj.CopyComplete
+D:\c# files\TankBattles\obj\Debug\TankBattles.exe
+D:\c# files\TankBattles\obj\Debug\TankBattles.pdb

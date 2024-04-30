@@ -1,0 +1,6 @@
+D:\c# files\GameProject\bin\Debug\GameProject.dll
+D:\c# files\GameProject\bin\Debug\GameProject.pdb
+D:\c# files\GameProject\obj\Debug\GameFrameWorkLibrary.csproj.AssemblyReference.cache
+D:\c# files\GameProject\obj\Debug\GameFrameWorkLibrary.csproj.CoreCompileInputs.cache
+D:\c# files\GameProject\obj\Debug\GameProject.dll
+D:\c# files\GameProject\obj\Debug\GameProject.pdb
