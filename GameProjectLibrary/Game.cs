@@ -11,20 +11,33 @@ namespace GameProject
 {
     public class Game
     {
-        int gravity = 10;
+        // attributes
+        int gravity;
         List<GameObject> gameObjects;
         Form container;
-        public Game(int gravity, Form container)
+        int gameObjectsCount;
+        // singleton instance
+        private static Game instance = null;
+        public static Game getInstance(Form container, int gravity = 10)
+        {
+            if (instance == null)
+            {
+                instance = new Game(container, gravity);
+            }
+            return instance;
+        }
+        // constructor
+        private Game(Form container, int gravity)
         {
             this.gravity = gravity;
             this.container = container;
             this.gameObjects = new List<GameObject>();
         }
-        public void addGameObject(Image img, int left, int top, bool isGravityEnabled)
+        public void addGameObject(GameObject obj)
         {   
-            GameObject obj = new GameObject(img, left, top, isGravityEnabled);
             gameObjects.Add(obj);
             container.Controls.Add(obj.PicBox);
+            gameObjectsCount++;
         }   
         public void update()
         {
@@ -32,6 +45,10 @@ namespace GameProject
             {
                 obj.update(gravity);
             }
+        }
+        public int GetObjectsCount()
+        {
+            return gameObjectsCount;
         }
     }
 }

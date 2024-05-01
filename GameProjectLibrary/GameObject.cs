@@ -5,14 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using GameProject;
 
 namespace GameFrameWorkLibrary
 {
     public class GameObject
     {
         public PictureBox PicBox;
-        public bool IsGravityEnabled = false;
-        public GameObject(Image img, int left, int top, bool IsGravityEnabled)
+        public bool IsGravityEnabled;
+        IMovement controller;
+        public GameObject(Image img, int left, int top, IMovement controller, bool IsGravityEnabled = false)
         {
             this.PicBox = new PictureBox();
             this.PicBox.Image = img;
@@ -22,6 +24,7 @@ namespace GameFrameWorkLibrary
             this.PicBox.Left = left;
             this.PicBox.Top = top;
             this.IsGravityEnabled = IsGravityEnabled;
+            this.controller = controller;
         }
         public void update(int gravity)
         {
@@ -29,6 +32,7 @@ namespace GameFrameWorkLibrary
             {
                 PicBox.Top += gravity;
             }
+            PicBox.Location = controller.move(PicBox.Location);     
         }
     }
 }
