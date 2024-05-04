@@ -35,25 +35,25 @@ namespace GameProject.Movements
                     location.Y += speed;
                 }
             }
-            if (Keyboard.IsKeyPressed(Key.LeftArrow))
-            {
-                if (location.X + speed > 10)
-                {
-                    location.X -= speed;
-                }
-            }
-            if (Keyboard.IsKeyPressed(Key.RightArrow))
-            {
-                if (location.X + offset < boundary.X)
-                {
-                    location.X += speed;
-                }
-            }
+            //if (Keyboard.IsKeyPressed(Key.LeftArrow))
+            //{
+            //    if (location.X + speed > 10)
+            //    {
+            //        location.X -= speed;
+            //    }
+            //}
+            //if (Keyboard.IsKeyPressed(Key.RightArrow))
+            //{
+            //    if (location.X + offset < boundary.X)
+            //    {
+            //        location.X += speed;
+            //    }
+            //}
             if (Keyboard.IsKeyPressed(Key.Space))
             {
-                if (location.X < boundary.X)
+                if (location.Y < boundary.Y)
                 {
-                    location.X += 2*speed;
+                    location.Y += 2*speed;
                 }
 
             }

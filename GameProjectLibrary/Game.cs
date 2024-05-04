@@ -29,6 +29,10 @@ namespace GameProject
             }
             return instance;
         }
+        public void setForm(Form f)
+        {
+            this.container = f; 
+        }
         // constructor
         private Game(Form container, int gravity)
         {
@@ -105,6 +109,14 @@ namespace GameProject
         public int GetObjectsCount()
         {
             return gameObjectsCount;
+        }
+        public void Restart()
+        {
+            score = 0;
+            gameObjectsCount = 0;
+            gameObjects.Clear();
+            collisions.Clear();
+            container.Controls.Clear();
         }
         //public int GetScore()
         //{

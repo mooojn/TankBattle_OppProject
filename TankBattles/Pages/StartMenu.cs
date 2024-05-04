@@ -25,8 +25,8 @@ namespace TankBattles.Pages
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             player2.Play();
-            Form f = new MainGame();
             this.Hide();
+            Form f = new MainGame();
             f.Show();
         }
 

@@ -33,16 +33,19 @@ namespace TankBattles
             objectImages.Add(Resources.Meteor_09);
             objectImages.Add(Resources.Meteor_10);
             // plrs
-            playerImages.Add(Resources.Ship5);  // player ship
+            playerImages.Add(Resources.Ship5);  // player ship  
             // enemy ships
             playerImages.Add(Resources.Ship2);
             playerImages.Add(Resources.Ship3);
             playerImages.Add(Resources.Ship4);    
             playerImages.Add(Resources.Ship6);
+
+            gameLoop.Enabled = true;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
             game = Game.getInstance(this);
+            game.setForm(this);
             Point boundary = new Point(this.Width, this.Height);
             
             game.addGameObject(new GameObject(GameObjectType.SmallObstacle, objectImages[0], 1040, 80,  new HorizontalPatrol(20, Direction.Left, boundary)));
@@ -52,7 +55,7 @@ namespace TankBattles
             //game.addGameObject(new GameObject(GameObjectType.SmallObstacle , objectImages[3], 340, 10, new ZigZagMovement(10, Direction.Up, boundary)));
             
             ////player
-            game.addGameObject(new GameObject(GameObjectType.Player, playerImages[0], 220, 100, new KeyboardMovement(10, boundary), false));
+            game.addGameObject(new GameObject(GameObjectType.Player, playerImages[0], 50, 250, new KeyboardMovement(10, boundary), false));
             
             game.addCollision(new CollisionDetection(GameObjectType.Player, GameObjectType.SmallObstacle, GameAction.DecreaseSmallScore));
             game.addCollision(new CollisionDetection(GameObjectType.Player, GameObjectType.MidObstacle, GameAction.DecreaseMidScore));
@@ -74,6 +77,14 @@ namespace TankBattles
             game.update();
             objectCount.Text = game.GetObjectsCount().ToString();
             score.Text = Game.score.ToString();
+            if (Convert.ToInt32(score.Text) < 0)
+            {
+                gameLoop.Enabled = false;
+                game.Restart();
+                this.Close();
+                GameOver f = new GameOver();
+                f.Show();
+            }
         }
     }
 }

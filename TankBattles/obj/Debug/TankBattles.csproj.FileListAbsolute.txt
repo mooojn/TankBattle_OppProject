@@ -27,3 +27,4 @@ D:\c# files\TankBattle_OppProject\TankBattles\bin\Debug\EZInput.dll
 D:\c# files\TankBattle_OppProject\TankBattles\bin\Debug\EZInput.xml
 D:\c# files\TankBattle_OppProject\TankBattles\obj\Debug\TankBattles.MainGame.resources
 D:\c# files\TankBattle_OppProject\TankBattles\obj\Debug\TankBattles.Pages.StartMenu.resources
+D:\c# files\TankBattle_OppProject\TankBattles\obj\Debug\TankBattles.GameOver.resources
