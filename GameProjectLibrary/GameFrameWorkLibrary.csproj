@@ -45,7 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CollisionDetection.cs" />
     <Compile Include="Enums\Direction.cs" />
+    <Compile Include="Enums\GameAction.cs" />
+    <Compile Include="Enums\GameObjectType.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="GameObject.cs" />
     <Compile Include="Movements\HorizontalPatrol.cs" />

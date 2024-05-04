@@ -126,5 +126,56 @@
   <ItemGroup>
     <None Include="Resources\War2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit_BTN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start_BTN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info_BTN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings_BTN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Meteor_01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Meteor_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Meteor_09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Meteor_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ship1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ship2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ship3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ship4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ship5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ship6.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

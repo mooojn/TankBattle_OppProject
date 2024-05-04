@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using GameProject;
+using GameProject.Enums;
 
 namespace GameFrameWorkLibrary
 {
@@ -14,7 +15,8 @@ namespace GameFrameWorkLibrary
         public PictureBox PicBox;
         public bool IsGravityEnabled;
         IMovement controller;
-        public GameObject(Image img, int left, int top, IMovement controller, bool IsGravityEnabled = false)
+        public GameObjectType type;
+        public GameObject(GameObjectType type, Image img, int left, int top, IMovement controller, bool IsGravityEnabled = false)
         {
             this.PicBox = new PictureBox();
             this.PicBox.Image = img;
@@ -23,6 +25,8 @@ namespace GameFrameWorkLibrary
             this.PicBox.BackColor = Color.Transparent;
             this.PicBox.Left = left;
             this.PicBox.Top = top;
+
+            this.type = type;
             this.IsGravityEnabled = IsGravityEnabled;
             this.controller = controller;
         }

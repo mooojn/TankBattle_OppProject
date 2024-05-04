@@ -7,26 +7,49 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media; 
+
 
 namespace TankBattles.Pages
 {
     public partial class StartMenu : Form
     {
+        SoundPlayer player = new SoundPlayer(@"D:\c# files\TankBattle_OppProject\Assets\spaceShooterMainBG.wav");
+        SoundPlayer player1 = new SoundPlayer(@"D:\c# files\TankBattle_OppProject\Assets\s1.wav");
+        SoundPlayer player2 = new SoundPlayer(@"D:\c# files\TankBattle_OppProject\Assets\s2.wav");
         public StartMenu()
         {
+            player.Play();
             InitializeComponent();
         }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
+            player2.Play();
             Form f = new MainGame();
             this.Hide();
             f.Show();
+        }
+
+        private void StartMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            player1.Play();
+            System.Threading.Thread.Sleep(1000);
+            this.Close();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

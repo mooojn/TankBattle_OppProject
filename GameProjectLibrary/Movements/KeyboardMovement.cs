@@ -21,33 +21,41 @@ namespace GameProject.Movements
         }
         public System.Drawing.Point move(System.Drawing.Point location)
         {
-            if (EZInput.Keyboard.IsKeyPressed(Key.UpArrow))
+            if (Keyboard.IsKeyPressed(Key.UpArrow))
             {
                 if (location.Y + speed > 10)
                 {
                     location.Y -= speed;
                 }
             }
-            if (EZInput.Keyboard.IsKeyPressed(Key.DownArrow))
+            if (Keyboard.IsKeyPressed(Key.DownArrow))
             {
                 if (location.Y + offset < boundary.Y)
                 {
                     location.Y += speed;
                 }
             }
-            if (EZInput.Keyboard.IsKeyPressed(Key.LeftArrow))
+            if (Keyboard.IsKeyPressed(Key.LeftArrow))
             {
                 if (location.X + speed > 10)
                 {
                     location.X -= speed;
                 }
             }
-            if (EZInput.Keyboard.IsKeyPressed(Key.RightArrow))
+            if (Keyboard.IsKeyPressed(Key.RightArrow))
             {
                 if (location.X + offset < boundary.X)
                 {
                     location.X += speed;
                 }
+            }
+            if (Keyboard.IsKeyPressed(Key.Space))
+            {
+                if (location.X < boundary.X)
+                {
+                    location.X += 2*speed;
+                }
+
             }
             return location;
         }

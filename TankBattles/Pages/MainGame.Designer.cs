@@ -32,6 +32,8 @@
             this.gameLoop = new System.Windows.Forms.Timer(this.components);
             this.objectCount = new System.Windows.Forms.Label();
             this.totalObjectCount = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.score = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // gameLoop
@@ -62,13 +64,37 @@
             this.totalObjectCount.Text = "Count";
             this.totalObjectCount.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label1.Location = new System.Drawing.Point(1238, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 25);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Score";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // score
+            // 
+            this.score.AutoSize = true;
+            this.score.Dock = System.Windows.Forms.DockStyle.Right;
+            this.score.Location = new System.Drawing.Point(1306, 0);
+            this.score.Name = "score";
+            this.score.Size = new System.Drawing.Size(24, 25);
+            this.score.TabIndex = 2;
+            this.score.Text = "0";
+            this.score.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // MainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TankBattles.Properties.Resources.War2;
+            this.BackgroundImage = global::TankBattles.Properties.Resources.BG;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1423, 935);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.score);
             this.Controls.Add(this.totalObjectCount);
             this.Controls.Add(this.objectCount);
             this.DoubleBuffered = true;
@@ -85,6 +111,8 @@
         private System.Windows.Forms.Timer gameLoop;
         private System.Windows.Forms.Label objectCount;
         private System.Windows.Forms.Label totalObjectCount;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label score;
     }
 }
 
