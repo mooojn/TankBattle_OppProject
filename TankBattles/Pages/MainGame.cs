@@ -70,7 +70,7 @@ namespace TankBattles
             //game.addGameObject(new GameObject(GameObjectType.SmallObstacle , objectImages[3], 340, 10, new ZigZagMovement(10, Direction.Up, boundary)));
             
             ////player
-            game.addGameObject(new GameObject(GameObjectType.Player, playerImages[0], 50, 250, new KeyboardMovement(20, boundary), false));
+            game.addGameObject(new GameObject(GameObjectType.Player, Hangar.shipChoice, 50, 250, new KeyboardMovement(20, boundary), false));
             
             game.addCollision(new CollisionDetection(GameObjectType.Player, GameObjectType.SmallObstacle, GameAction.DecreaseSmallScore));
             game.addCollision(new CollisionDetection(GameObjectType.Player, GameObjectType.MidObstacle, GameAction.DecreaseMidScore));
@@ -105,14 +105,14 @@ namespace TankBattles
 
                 // Add one obstacle directly towards the ship
                 int speedTowardsShip = rnd.Next(15, 30);
-                int distanceL = rnd.Next(800, 1000);
+                int distanceL = rnd.Next(1000, 1200);
                 game.addGameObject(new GameObject(GameObjectType.SmallObstacle, objectImages[rnd.Next(0, 3)], player.PicBox.Left + distanceL, player.PicBox.Top, new HorizontalPatrol(speedTowardsShip, Direction.Left, boundary)));
 
                 int obstacleCount = rnd.Next(minObsCount, maxObsCount);
                 for (int j = 0; j < obstacleCount; j++)
                 {
                     int speed = rnd.Next(15, 30);
-                    int distanceLSpread = rnd.Next(800, 1000); 
+                    int distanceLSpread = rnd.Next(1000, 1200); 
                     int distanceT = rnd.Next(0, 200);
                     game.addGameObject(new GameObject(GameObjectType.SmallObstacle, objectImages[rnd.Next(0, 3)], player.PicBox.Left + distanceLSpread, player.PicBox.Top + distanceT, new HorizontalPatrol(speed, Direction.Left, boundary)));
                 }

@@ -48,3 +48,4 @@ D:\c# files\TankBattle_OppProject\TankBattles\bin\Debug\NAudio.WinForms.xml
 D:\c# files\TankBattle_OppProject\TankBattles\bin\Debug\NAudio.WinMM.xml
 D:\c# files\TankBattle_OppProject\TankBattles\bin\Debug\System.Security.AccessControl.xml
 D:\c# files\TankBattle_OppProject\TankBattles\bin\Debug\System.Security.Principal.Windows.xml
+D:\c# files\TankBattle_OppProject\TankBattles\obj\Debug\TankBattles.Hangar.resources

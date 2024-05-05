@@ -86,6 +86,12 @@
     <Compile Include="Pages\GameOver.Designer.cs">
       <DependentUpon>GameOver.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Hangar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Hangar.Designer.cs">
+      <DependentUpon>Hangar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\MainGame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Pages\GameOver.resx">
       <DependentUpon>GameOver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Hangar.resx">
+      <DependentUpon>Hangar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\MainGame.resx">
       <DependentUpon>MainGame.cs</DependentUpon>
@@ -219,6 +228,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Replay_BTN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hangar_BTN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table_01.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

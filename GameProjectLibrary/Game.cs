@@ -52,28 +52,12 @@ namespace GameProject
             gameObjects.Remove(obj);
             container.Controls.Remove(obj.PicBox);
             gameObjectsCount--;
+            score++;
         }
         public void addCollision(CollisionDetection collision)
         {
             collisions.Add(collision);
         }
-        //public void update()
-        //{
-        //    foreach (GameObject obj in gameObjects)
-        //    {
-        //        obj.update(gravity);
-        //        foreach (GameObject obj2 in gameObjects)
-        //        {
-        //            if (obj2.type == GameObjectType.Player)
-        //            {
-        //                foreach (CollisionDetection c in collisions)
-        //                {
-        //                    c.IsCollide(obj.PicBox, obj2.PicBox);
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
         public void update()
         {
             for (int i = 0; i < gameObjects.Count; i++)

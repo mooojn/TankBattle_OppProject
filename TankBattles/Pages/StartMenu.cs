@@ -49,7 +49,8 @@ namespace TankBattles.Pages
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-
+            Form f = new Hangar();
+            f.Show();
         }
     }
 }
