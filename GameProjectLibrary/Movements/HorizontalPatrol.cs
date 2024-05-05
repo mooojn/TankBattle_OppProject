@@ -36,9 +36,14 @@ namespace GameProject.Movements
             }
             else
             {
-                location.X += speed;
+                //location.X += speed;
+                location.X = 0;
             }
             return location;
+        }
+        public void setSpeed(int speed)
+        {
+            this.speed = speed;
         }
     }
 }

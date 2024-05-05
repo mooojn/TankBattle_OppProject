@@ -11,6 +11,7 @@ namespace GameProject
         Up,
         Down,
         Left,
-        Right
+        Right,
+        Null
     }
 }

@@ -29,11 +29,6 @@ namespace GameProject
             }
             return instance;
         }
-        public void setForm(Form f)
-        {
-            this.container = f; 
-        }
-        // constructor
         private Game(Form container, int gravity)
         {
             this.gravity = gravity;
@@ -41,6 +36,11 @@ namespace GameProject
             this.gameObjects = new List<GameObject>();
             this.collisions = new List<CollisionDetection>();
         }
+        public void setForm(Form f)
+        {
+            this.container = f; 
+        }
+        // constructor
         public void addGameObject(GameObject obj)
         {   
             gameObjects.Add(obj);
@@ -80,6 +80,10 @@ namespace GameProject
             {
                 GameObject obj = gameObjects[i];
                 obj.update(gravity);
+                if (obj.PicBox.Image == null)
+                {
+                    removeGameObject(obj);
+                }
 
                 if (obj.type == GameObjectType.Player)
                 {
@@ -104,6 +108,18 @@ namespace GameProject
                     }
                 }
             }
+        }
+
+        public GameObject getPlayer()
+        {
+            foreach (GameObject obj in gameObjects)
+            {
+                if (obj.type == GameObjectType.Player)
+                {
+                    return obj; 
+                }
+            }
+            return null;
         }
 
         public int GetObjectsCount()

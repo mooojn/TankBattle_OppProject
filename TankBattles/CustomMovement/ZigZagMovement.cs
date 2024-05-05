@@ -16,6 +16,10 @@ namespace TankBattles.CustomMovement
         private Point boundary;
         private int count;
         private int offset = 90;
+        public void setSpeed(int speed)
+        {
+            this.speed = speed;
+        }
         public ZigZagMovement(int speed, Direction direction, Point boundary)
         {
             this.speed = speed;

@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using GameProject;
 using GameProject.Enums;
+using System.Diagnostics.Eventing.Reader;
 
 namespace GameFrameWorkLibrary
 {
@@ -36,7 +37,11 @@ namespace GameFrameWorkLibrary
             {
                 PicBox.Top += gravity;
             }
-            PicBox.Location = controller.move(PicBox.Location);     
+            Point loc = controller.move(PicBox.Location);
+            if (loc.X == 0)
+                PicBox.Image = null;
+            else
+                PicBox.Location = loc;
         }
     }
 }

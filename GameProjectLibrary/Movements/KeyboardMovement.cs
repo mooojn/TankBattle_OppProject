@@ -13,6 +13,10 @@ namespace GameProject.Movements
         private int speed;
         private System.Drawing.Point boundary;
         private int offset;
+        public void setSpeed(int speed)
+        {
+            this.speed = speed;
+        }
         public KeyboardMovement(int speed, System.Drawing.Point boundary)
         {
             this.speed = speed;

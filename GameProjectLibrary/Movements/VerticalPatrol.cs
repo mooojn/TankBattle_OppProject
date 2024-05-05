@@ -39,5 +39,9 @@ namespace GameProject.Movements
             }
             return location;
         }
+        public void setSpeed(int speed)
+        {
+            this.speed = speed;
+        }
     }
 }
