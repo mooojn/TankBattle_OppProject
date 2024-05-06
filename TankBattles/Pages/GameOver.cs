@@ -28,5 +28,12 @@ namespace TankBattles
             Form f = new MainGame();
             f.Show();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form f = new Pages.StartMenu();
+            f.Show();
+        }
     }
 }

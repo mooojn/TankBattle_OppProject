@@ -235,5 +235,8 @@
   <ItemGroup>
     <None Include="Resources\Table_01.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Backward_BTN.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

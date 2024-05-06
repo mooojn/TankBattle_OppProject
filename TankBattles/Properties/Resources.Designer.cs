@@ -63,6 +63,16 @@ namespace TankBattles.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Backward_BTN {
+            get {
+                object obj = ResourceManager.GetObject("Backward_BTN", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BG {
             get {
                 object obj = ResourceManager.GetObject("BG", resourceCulture);

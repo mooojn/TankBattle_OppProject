@@ -42,7 +42,9 @@ namespace GameProject
         }
         // constructor
         public void addGameObject(GameObject obj)
-        {   
+        {
+            if (gameObjectsCount > 20)      // factory pattern
+                return;
             gameObjects.Add(obj);
             container.Controls.Add(obj.PicBox);
             gameObjectsCount++;
